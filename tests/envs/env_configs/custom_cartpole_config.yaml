@@ -1,0 +1,9 @@
+env:
+  id: CustomCartPole-v0
+  config:
+    gravity: 9.5
+    masscart: 1.0
+    masspole: 0.1
+    length: 0.5
+    force_mag: 10.0
+    tau: 0.02

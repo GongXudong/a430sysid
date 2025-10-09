@@ -1,0 +1,8 @@
+defaults:
+  - env: custom_a430gym
+  - optimize: optimize_config_for_custom_a430gym
+  - _self_
+
+optimize:
+  optimize_config:
+    seed: 229876

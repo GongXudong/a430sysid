@@ -1,0 +1,4 @@
+env:
+  id: CustomMountainCarContinuous-v0
+  config:
+    power: 0.0015

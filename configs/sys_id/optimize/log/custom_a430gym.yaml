@@ -1,0 +1,2 @@
+save_dir: algorithms/logs
+exp_name: ${env.env_str}/${optimize.env_params.exp_str}/${optimize.optimize_config.opt_config_str}_seed_${optimize.optimize_config.seed}

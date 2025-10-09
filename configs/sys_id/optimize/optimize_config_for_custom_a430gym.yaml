@@ -1,0 +1,6 @@
+defaults:
+  - env_params: custom_a430gym/all
+  - optimize_config: 1000_1_last
+  - exciting_trajectory: custom_a430gym/demo_1
+  - log: custom_a430gym
+  - _self_

@@ -1,0 +1,40 @@
+id: CustomA430Gym-v0
+config:  # use only for testing
+  # plane_const, 8个
+  S: 0.040809
+  cbar: 0.09781
+  B: 0.43
+  m: 0.1
+  Jx: 0.00400
+  Jy: 0.00732
+  Jz: 0.01093
+  Jxz: 0.00014
+  # aero_coeffs, 27个
+  CL0: 0.2
+  CLq: 6.898814
+  CLal: 4.235972
+  CLde: 0.011006
+  CD0: 0.04735
+  CDk: 1.0
+  CDde: -0.0013
+  CDda: 0.000149
+  Cy0: 0.0
+  Cybe: -0.356799
+  Cyp: -0.230683
+  Cyr: 0.378474
+  Cyda: -0.004417
+  Cl0: 0.0
+  Clbe: -0.01363
+  Clp: -0.340622
+  Clr: 0.015922
+  Clda: -0.006115
+  Cm0: 0.0
+  Cmal: -0.459587
+  Cmq: -6.644907
+  Cmde: -0.021453
+  Cn0: 0.0
+  Cnbe: 0.158268
+  Cnp: 0.110384
+  Cnr: -0.185416
+  Cnda: 0.002108
+env_str: custom_a430gym

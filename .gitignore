@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Test
+.coverage
+
+data/
+!/src/a430sysid/data/
+
+logs/
+outputs/
+tryings/
