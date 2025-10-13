@@ -34,9 +34,9 @@ def identify_params(cfg: DictConfig) -> None:
     ) = load_data_for_action_list_recursively_from_csv_files(
         root_dir=PROJECT_ROOT_DIR / cfg.optimize.exciting_trajectory.data_path,
         observation_keys=[
-            "phi_smoothed",
+            "phi_wrapped",
             "theta_smoothed",
-            "psi_smoothed",
+            "psi_wrapped",
             "p_calc",
             "q_calc",
             "r_calc",
@@ -51,9 +51,9 @@ def identify_params(cfg: DictConfig) -> None:
         insert_action_dr=True,
         insert_action_dr_index=2,
         deg2rad_columns=[
-            "phi_smoothed",
+            "phi_wrapped",
             "theta_smoothed",
-            "psi_smoothed",
+            "psi_wrapped",
             "p_calc",
             "q_calc",
             "r_calc",
@@ -62,6 +62,7 @@ def identify_params(cfg: DictConfig) -> None:
         ],
         action_list_len=cfg.optimize.optimize_config.action_list_len,
     )
+
     log.info(
         f"Load data success, obs_real shape: {obs_real.shape}, act_real shape: {act_real.shape}, next_obs_real shape: {next_obs_real.shape}"
     )

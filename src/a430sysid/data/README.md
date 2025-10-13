@@ -27,3 +27,7 @@
 ### 6.calc_u_v_w_pre_processor.py
 
 结合$x, y, z$的微分与$\phi, \theta, \psi$的值，求$u, v, w$和$vt, \alpha, \beta$.
+
+### 7.wrap_euler_angle_pre_processor.py
+
+将滚转角$\phi$和偏航角$\psi$的范围限制到[-180, 180]

@@ -25,6 +25,9 @@ from a430sysid.data.pre_processor.smoothing_pre_processor import SmoothingPrePro
 from a430sysid.data.pre_processor.unwrap_euler_angle_pre_processor import (
     UnwrapEulerAnglePreProcessor,
 )
+from a430sysid.data.pre_processor.wrap_euler_angle_pre_processor import (
+    WrapEulerAnglePreProcessor,
+)
 from a430sysid.utils.path_utils import find_csv_files
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent
@@ -35,6 +38,7 @@ PRE_PROCESSOR_DICT = {
     "differential_pre_processor": DifferentialPreProcessor,
     "calc_p_q_r_pre_processor": CalcPQRPreProcessor,
     "calc_u_v_w_pre_processor": CalcUVWPreProcessor,
+    "wrap_euler_angle_pre_processor": WrapEulerAnglePreProcessor,
 }
 
 

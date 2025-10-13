@@ -1,6 +1,27 @@
 import numpy as np
 
 
+def wrap_euler_angle(
+    euler_angle_raw: np.ndarray,
+    use_rad: bool = False,
+):
+    def wrap_euler_angle_degrees(euler_angle_degrees: np.ndarray):
+        # 首先将角度转换到[0, 360)范围
+        normalized = euler_angle_degrees % 360
+
+        # 然后将大于180的值转换到负数区间
+        normalized[normalized > 180] -= 360
+
+        return normalized
+
+    if use_rad:
+        tmp = np.rad2deg(euler_angle_raw)
+        wrapped_tmp = wrap_euler_angle_degrees(tmp)
+        return np.deg2rad(wrapped_tmp)
+    else:
+        return wrap_euler_angle_degrees(euler_angle_raw)
+
+
 def unwrap_euler_angle(
     euler_angle_raw: np.ndarray, threshold: float = 180.0, use_rad: bool = False
 ) -> np.ndarray:
