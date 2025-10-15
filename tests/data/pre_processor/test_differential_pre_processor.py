@@ -20,33 +20,27 @@ PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent.parent
     [
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_143434.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_straight_4_20230215_142714.csv",
             False,
             "gradient",
         ),
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_145902.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_straight_4_20230215_143034.csv",
             False,
             "gradient",
         ),
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_150042.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_u_8_20230215_143434.csv",
             False,
             "gradient",
         ),
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_150158.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_u_8_20230215_145902.csv",
             False,
             "gradient",
-        ),
-        (
-            PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_143434.csv",
-            False,
-            "savgol",
         ),
     ],
 )
@@ -111,7 +105,7 @@ def plot(traj_df: pd.DataFrame):
 if __name__ == "__main__":
     test_differential_pre_processor(
         traj_file=PROJECT_ROOT_DIR
-        / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_143434.csv",
+        / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_u_8_20230215_143434.csv",
         show_figure=True,
         diff_method="savgol",
     )

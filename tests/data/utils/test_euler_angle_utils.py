@@ -45,7 +45,10 @@ def test_wrap_euler_angle():
 
 
 def test_unwrap_euler_angle():
-    df = pd.read_csv(PROJECT_ROOT_DIR / "tests/data/short_loop_6_20230227_120302.csv")
+    df = pd.read_csv(
+        PROJECT_ROOT_DIR
+        / "tests/data/data_used_in_tests/custom_a430py/short_loop_6_20230227_120302.csv"
+    )
 
     psi_raw = df.iloc[:]["psi"]
     # print(psi_raw.to_numpy())
@@ -63,7 +66,8 @@ def test_euler_rates_to_body_rates():
 def test_NED_velocities_to_BCS_velocities():
     # df = pd.read_csv(PROJECT_ROOT_DIR / "tests/data/short_loop_6_20230227_120302.csv")
     df = pd.read_csv(
-        PROJECT_ROOT_DIR / "tests/data/short_straight_4_20230215_133852.csv"
+        PROJECT_ROOT_DIR
+        / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230215_133852.csv"
     )
 
     t_arrays = np.arange(len(df)) * 0.01

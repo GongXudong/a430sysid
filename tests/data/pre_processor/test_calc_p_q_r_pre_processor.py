@@ -19,9 +19,21 @@ PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent.parent
 @pytest.mark.parametrize(
     "traj_file, show_figure",
     [
-        (PROJECT_ROOT_DIR / "tests/data/short_loop_6_20230227_120302.csv", False),
-        (PROJECT_ROOT_DIR / "tests/data/short_straight_4_20230215_133852.csv", False),
-        (PROJECT_ROOT_DIR / "tests/data/short_straight_4_20230306_102637.csv", False),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/short_loop_6_20230227_120302.csv",
+            False,
+        ),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230215_133852.csv",
+            False,
+        ),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230306_102637.csv",
+            False,
+        ),
     ],
 )
 def test_calc_p_q_r_pre_processor(traj_file: Path, show_figure: bool):
@@ -96,8 +108,7 @@ def plot(traj_df: pd.DataFrame):
 
 if __name__ == "__main__":
     test_calc_p_q_r_pre_processor(
-        # traj_file=PROJECT_ROOT_DIR / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_143434.csv",
         traj_file=PROJECT_ROOT_DIR
-        / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_150158.csv",
+        / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_u_8_20230215_143434.csv",
         show_figure=True,
     )

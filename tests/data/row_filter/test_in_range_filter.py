@@ -76,7 +76,10 @@ def test_in_range_filter_mock_2():
 
 
 def test_in_range_filter_z():
-    traj_df_path = PROJECT_ROOT_PATH / "tests/data/short_straight_4_20230215_133852.csv"
+    traj_df_path = (
+        PROJECT_ROOT_PATH
+        / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230215_133852.csv"
+    )
     traj_df = pd.read_csv(traj_df_path)
 
     observation_keys = [

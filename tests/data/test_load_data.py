@@ -15,7 +15,8 @@ PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent
 
 def test_load_data_for_action_list():
     obs_list_real, act_list_real, next_obs_list_real = load_data_for_action_list(
-        data_dir=PROJECT_ROOT_DIR / "data/custom_cartpole", action_list_len=5
+        data_dir=PROJECT_ROOT_DIR / "tests/data/data_used_in_tests/custom_cartpole",
+        action_list_len=5,
     )
     print(
         f"obs_list_real shape: {obs_list_real.shape}, act_list_real shape: {act_list_real.shape}, next_obs_list_real shape: {next_obs_list_real.shape}"
@@ -35,8 +36,10 @@ def test_load_data_for_action_list():
 @pytest.mark.parametrize(
     "traj_path",
     [
-        PROJECT_ROOT_DIR / "tests/data/short_straight_4_20230306_102637.csv",
-        PROJECT_ROOT_DIR / "tests/data/short_loop_6_20230227_120302.csv",
+        PROJECT_ROOT_DIR
+        / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230306_102637.csv",
+        PROJECT_ROOT_DIR
+        / "tests/data/data_used_in_tests/custom_a430py/short_loop_6_20230227_120302.csv",
     ],
 )
 def test_load_data_from_trajectory_1(traj_path: Path):
@@ -76,8 +79,16 @@ def test_load_data_from_trajectory_1(traj_path: Path):
 @pytest.mark.parametrize(
     "root_dir, action_list_len",
     [
-        (PROJECT_ROOT_DIR / "data/custom_a430_gym/2_processed", 1),
-        (PROJECT_ROOT_DIR / "data/custom_a430_gym/2_processed", 2),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/2_processed",
+            1,
+        ),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/2_processed",
+            2,
+        ),
     ],
 )
 def test_load_data_for_action_list_recursively_from_csv_files(
@@ -114,6 +125,7 @@ def test_load_data_for_action_list_recursively_from_csv_files(
 
 if __name__ == "__main__":
     test_load_data_for_action_list_recursively_from_csv_files(
-        root_dir=PROJECT_ROOT_DIR / "data/custom_a430_gym/2_processed",
+        root_dir=PROJECT_ROOT_DIR
+        / "tests/data/data_used_in_tests/custom_a430py/2_processed",
         action_list_len=1,
     )

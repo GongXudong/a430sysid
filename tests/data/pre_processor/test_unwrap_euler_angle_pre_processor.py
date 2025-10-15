@@ -13,9 +13,18 @@ PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent.parent
 @pytest.mark.parametrize(
     "traj_file",
     [
-        (PROJECT_ROOT_DIR / "tests/data/short_loop_6_20230227_120302.csv"),
-        (PROJECT_ROOT_DIR / "tests/data/short_straight_4_20230215_133852.csv"),
-        (PROJECT_ROOT_DIR / "tests/data/short_straight_4_20230306_102637.csv"),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/short_loop_6_20230227_120302.csv"
+        ),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230215_133852.csv"
+        ),
+        (
+            PROJECT_ROOT_DIR
+            / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230306_102637.csv"
+        ),
     ],
 )
 def test_unwrap_euler_angle_pre_processor(traj_file: Path):
@@ -44,4 +53,7 @@ def test_unwrap_euler_angle_pre_processor(traj_file: Path):
 
 
 if __name__ == "__main__":
-    test_unwrap_euler_angle_pre_processor()
+    test_unwrap_euler_angle_pre_processor(
+        traj_file=PROJECT_ROOT_DIR
+        / "tests/data/data_used_in_tests/custom_a430py/short_loop_6_20230227_120302.csv",
+    )

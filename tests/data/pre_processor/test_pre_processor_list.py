@@ -29,27 +29,22 @@ PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent.parent
     [
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_143434.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_straight_4_20230215_142714.csv",
             False,
         ),
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_145902.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_straight_4_20230215_143034.csv",
             False,
         ),
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_150042.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_u_8_20230215_143434.csv",
             False,
         ),
         (
             PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_150158.csv",
-            False,
-        ),
-        (
-            PROJECT_ROOT_DIR
-            / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_143434.csv",
+            / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_u_8_20230215_145902.csv",
             False,
         ),
     ],
@@ -202,8 +197,7 @@ def plot(
 
 if __name__ == "__main__":
     test_pre_processor_list(
-        # traj_file=PROJECT_ROOT_DIR / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_143434.csv",
         traj_file=PROJECT_ROOT_DIR
-        / "data/custom_a430_gym/1_filtered/20230215/short_u_8_20230215_150158.csv",
+        / "tests/data/data_used_in_tests/custom_a430py/1_filtered/short_u_8_20230215_145902.csv",
         show_figure=True,
     )

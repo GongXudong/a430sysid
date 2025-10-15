@@ -8,7 +8,10 @@ PROJECT_ROOT_PATH = Path(__file__).parent.parent.parent.parent
 
 
 def test_default_value_filter_1():
-    traj_df_path = PROJECT_ROOT_PATH / "tests/data/short_straight_4_20230215_133852.csv"
+    traj_df_path = (
+        PROJECT_ROOT_PATH
+        / "tests/data/data_used_in_tests/custom_a430py/short_straight_4_20230215_133852.csv"
+    )
     traj_df = pd.read_csv(traj_df_path)
 
     observation_keys = [
