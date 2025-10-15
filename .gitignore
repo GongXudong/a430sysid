@@ -14,6 +14,7 @@ wheels/
 
 data/
 !/src/a430sysid/data/
+!/tests/data/
 
 logs/
 outputs/
