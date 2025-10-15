@@ -4,25 +4,15 @@ requires-python = ">=3.12"
 
 [[package]]
 name = "a430py"
-version = "0.1.0"
-source = { editable = "../a430py" }
+version = "0.1.3"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
 dependencies = [
     { name = "gymnasium" },
     { name = "numpy" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "gymnasium", specifier = ">=1.2.0" },
-    { name = "numpy", specifier = ">=2.3.2" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "pandas", specifier = ">=2.3.2" },
-    { name = "pre-commit", specifier = ">=4.3.0" },
-    { name = "pytest", specifier = ">=8.4.2" },
-    { name = "pytest-cov", specifier = ">=7.0.0" },
+sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/e2/2b/9272ffb5d3953eae045a898b5fab0c8460d1a9f8f9556b8658f1887ec60b/a430py-0.1.3.tar.gz", hash = "sha256:53d8cc13dd42d9636c07a6192de710ef825fd341f38b52f022ec61f37f4a8288", size = 146046, upload-time = "2025-10-15T02:03:04.444Z" }
+wheels = [
+    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/ca/08/1dee326557b51653c91d60ce9909203d41f6662475ad5da84e9f23b38e5f/a430py-0.1.3-py3-none-any.whl", hash = "sha256:64c2b0748af868a0f0885c4436d219ebedd434339d945ef2e695b365ceb6cf37", size = 147921, upload-time = "2025-10-15T02:03:02.427Z" },
 ]
 
 [[package]]
@@ -52,7 +42,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "a430py", editable = "../a430py" },
+    { name = "a430py", specifier = "==0.1.3" },
     { name = "gymnasium", specifier = ">=1.2.0" },
     { name = "hydra-core", specifier = ">=1.3.2" },
     { name = "matplotlib", specifier = ">=3.10.6" },
