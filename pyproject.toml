@@ -28,6 +28,7 @@ default = true
 [dependency-groups]
 dev = [
     "ipykernel>=6.30.1",
+    "omegaconf>=2.3.0",
     "pandas>=2.3.2",
     "pre-commit>=4.3.0",
     "pysindy>=2.0.0",

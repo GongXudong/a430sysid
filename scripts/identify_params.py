@@ -24,6 +24,7 @@ log = logging.getLogger(__name__)
 
 @hydra.main(version_base=None, config_path="../configs/sys_id", config_name="config")
 def identify_params(cfg: DictConfig) -> None:
+    # from omegaconf import OmegaConf
     # print(OmegaConf.to_yaml(cfg))
 
     # Load data
@@ -115,7 +116,7 @@ def identify_params(cfg: DictConfig) -> None:
     study.trials_dataframe().to_csv(save_path, index=False)
 
 
-# python scripts/identify_params.py optimize.optimize_config.seed=31 optimize.optimize_config.n_trials=100
 # uv run scripts/identify_params.py optimize.optimize_config.seed=31 optimize.optimize_config.n_trials=100
+# uv run scripts/identify_params.py optimize/optimize_config=3000_4_last optimize.optimize_config.seed=10
 if __name__ == "__main__":
     identify_params()
