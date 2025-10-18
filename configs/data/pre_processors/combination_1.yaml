@@ -1,0 +1,100 @@
+- pre_processor_name: unwrap_euler_angle_pre_processor
+  args:
+    euler_angle_column_names:
+      - phi
+      - psi
+    unwrapped_euler_angle_column_names:
+      - phi_unwrapped
+      - psi_unwrapped
+    threshold: 180.0
+    use_rad: false
+- pre_processor_name: interpolation_pre_processor
+  args:
+    method: cubic
+    limit_direction: both
+    interpolation_columns:
+      - x
+      - y
+      - z
+      - vt
+      - alpha
+      - beta
+      - phi_unwrapped
+      - theta
+      - psi_unwrapped
+      - p
+      - q
+      - r
+      - u
+      - v
+      - w
+- pre_processor_name: smoothing_pre_processor
+  args:
+    column_names_to_smooth:
+      - x
+      - y
+      - z
+      - phi_unwrapped
+      - theta
+      - psi_unwrapped
+    new_column_names:
+      - x_smoothed
+      - y_smoothed
+      - z_smoothed
+      - phi_smoothed
+      - theta_smoothed
+      - psi_smoothed
+    window_size: 15
+    poly_order: 3
+    robust_smoothing: false
+- pre_processor_name: differential_pre_processor
+  args:
+    column_names_to_diff:
+      - x_smoothed
+      - y_smoothed
+      - z_smoothed
+      - phi_smoothed
+      - theta_smoothed
+      - psi_smoothed
+    new_column_names:
+      - x_diff
+      - y_diff
+      - z_diff
+      - phi_diff
+      - theta_diff
+      - psi_diff
+    dt: 0.01
+    method: savgol
+- pre_processor_name: calc_p_q_r_pre_processor
+  args:
+    phi_rate_column_name: phi_diff
+    theta_rate_column_name: theta_diff
+    psi_rate_column_name: psi_diff
+    phi_column_name: phi_smoothed
+    theta_column_name: theta_smoothed
+    new_p_column_name: p_calc
+    new_q_column_name: q_calc
+    new_r_column_name: r_calc
+- pre_processor_name: calc_u_v_w_pre_processor
+  args:
+    x_dot_column_name: x_diff
+    y_dot_column_name: y_diff
+    z_dot_column_name: z_diff
+    phi_column_name: phi_smoothed
+    theta_column_name: theta_smoothed
+    psi_column_name: psi_smoothed
+    new_u_column_name: u_calc
+    new_v_column_name: v_calc
+    new_w_column_name: w_calc
+    new_vt_column_name: vt_calc
+    new_alpha_column_name: alpha_calc
+    new_beta_column_name: beta_calc
+- pre_processor_name: wrap_euler_angle_pre_processor
+  args:
+    euler_angle_column_names:
+      - phi_smoothed
+      - psi_smoothed
+    wrapped_euler_angle_column_names:
+      - phi_wrapped
+      - psi_wrapped
+    use_rad: false

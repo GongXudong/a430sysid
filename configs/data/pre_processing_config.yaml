@@ -1,0 +1,7 @@
+defaults:
+  - pre_processors: combination_1
+  - _self_
+
+data_dir: data/custom_a430_gym/1_filtered
+to_replaced_path_str: 1_filtered
+new_path_str: 2_processed

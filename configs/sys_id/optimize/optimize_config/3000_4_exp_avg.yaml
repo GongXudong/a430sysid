@@ -1,0 +1,7 @@
+n_trials: 3000
+n_jobs: -1
+seed: ???
+action_list_len: 4
+loss_aggrev_method: exp_average
+loss_aggrev_gamma: 0.9
+opt_config_str: opt_act_len_4_exp_avg_0_9_step_3000

@@ -1,7 +1,7 @@
-n_trials: 1000
+n_trials: 3000
 n_jobs: -1
 seed: ???
 action_list_len: 1
 loss_aggrev_method: last
 loss_aggrev_gamma: 0.9
-opt_config_str: opt_act_len_1_step_1000
+opt_config_str: opt_act_len_1_step_3000

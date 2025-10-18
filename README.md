@@ -1,5 +1,10 @@
 # a430sysid
 
+System Identification for aircraft A430.
+
+## TODO
+
+1. 增加评估脚本，执行某个csv中的动作序列，评估生成的轨迹与原轨迹相似度
 
 ## Develop
 
@@ -32,3 +37,8 @@ git commit -m <MESSAGE> --no-verify
 # update pre-commit hook
 pre-commit autoupdate
 ```
+
+### Run scripts in offline environment
+
+1. Copy `~/.cache` to offline computer
+2. Execute `uv sync` on offline computer
